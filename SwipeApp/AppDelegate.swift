@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,6 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "Username") != nil{
+            print("you have a username")
+        }
+        else {
+            defaults.set("NONE", forKey: "Username")
+
+        }
+
         return true
     }
 

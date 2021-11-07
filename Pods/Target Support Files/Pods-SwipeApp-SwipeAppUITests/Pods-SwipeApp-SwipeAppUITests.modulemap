@@ -1,0 +1,6 @@
+framework module Pods_SwipeApp_SwipeAppUITests {
+  umbrella header "Pods-SwipeApp-SwipeAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
